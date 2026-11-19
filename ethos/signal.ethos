@@ -1,0 +1,18 @@
+Signal
+[]
+[ Activate.Generation
+  Live ]
+[ Activated.Generation
+  ActivateRefused.ActivateRefusal
+  Live.Generation
+  LiveRefused.LiveRefusal ]
+[ Generation.String
+  StorePath.String
+  ProgramPath.String
+  Argument.String
+  Command.{ ProgramPath Vector<Argument> }
+  ProcessOutcome.[ Exited.Integer Signalled.Integer NotStarted.String ]
+  Evidence.{ Command ProcessOutcome String }
+  ActivateRefusal.[ NotRealized.Generation Collision.StorePath Failed.Evidence
+                    ProfileUnchanged.Generation ]
+  LiveRefusal.[ NoLiveGeneration Unreadable.String NotRealized.Generation ] ]
